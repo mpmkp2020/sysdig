@@ -172,7 +172,7 @@ else()
 	set(LUAJIT_INCLUDE "${LUAJIT_SRC}")
 	if(NOT WIN32)
 		set(LUAJIT_LIB "${LUAJIT_SRC}/libluajit.a")
- 		if("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "ppc64le")
+		if("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "ppc64le")
 		ExternalProject_Add(luajit
 			GIT_REPOSITORY "https://github.com/moonjit/moonjit"
 			GIT_TAG "2.1.2"
@@ -194,8 +194,8 @@ else()
                         INSTALL_COMMAND "")
 		else()
 		ExternalProject_Add(luajit
-			URL "http://download.draios.com/dependencies/LuaJIT-2.0.3.tar.gz"
-			URL_MD5 "f14e9104be513913810cd59c8c658dc0"
+			GIT_REPOSITORY "https://github.com/LuaJIT/LuaJIT"
+			GIT_TAG "1d8b747c161db457e032a023ebbff511f5de5ec2"
 			CONFIGURE_COMMAND ""
 			BUILD_COMMAND ${CMD_MAKE}
 			BUILD_IN_SOURCE 1
