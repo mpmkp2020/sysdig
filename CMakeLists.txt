@@ -203,10 +203,8 @@ else()
 	else()
 		set(LUAJIT_LIB "${LUAJIT_SRC}/lua51.lib")
 		ExternalProject_Add(luajit
-			#URL "http://download.draios.com/dependencies/LuaJIT-2.0.3.tar.gz"
-			#URL_MD5 "f14e9104be513913810cd59c8c658dc0"
-			GIT_REPOSITORY "https://github.com/LuaJIT/LuaJIT"
-			GIT_TAG "1d8b747c161db457e032a023ebbff511f5de5ec2"
+			URL "http://download.draios.com/dependencies/LuaJIT-2.0.3.tar.gz"
+			URL_MD5 "f14e9104be513913810cd59c8c658dc0"
 			CONFIGURE_COMMAND ""
 			BUILD_COMMAND msvcbuild.bat
 			BUILD_BYPRODUCTS ${LUAJIT_LIB}
