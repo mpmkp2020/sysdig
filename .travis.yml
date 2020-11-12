@@ -20,7 +20,7 @@ language: c
 matrix:
   include:
     - env: BUILD_TYPE=Debug
-      os: windows
+      os: linux
     - env: BUILD_TYPE=Release
       os: linux
     - env: BUILD_TYPE=Debug
